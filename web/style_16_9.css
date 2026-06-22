@@ -14,8 +14,9 @@ body #container {
 	justify-content: center; */
 	width: 100%;
 	height: 100vh;
-	background-color: #e2efd9;
-	background-color: #183253;
+	/* background-color: #e2efd9; */
+	/* background-color: #183253; */
+	background-color: #235451;
 }
 
 #content {
