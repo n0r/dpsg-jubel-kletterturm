@@ -1,0 +1,20 @@
+[Unit]
+Description=uWSGI Emperor                                        
+After=syslog.target
+
+[Service]
+Type=simple
+ExecStart=/home/pi/dpsg-jubel-kletterturm/rpi-config/%i.sh
+PIDFile=/tmp/infoscreen.pid
+User=pi
+Group=pi
+# Requires systemd version 211 or newer
+#RuntimeDirectory=uwsgi  
+Restart=always
+#KillSignal=SIGQUIT
+#Type=notify
+#StandardError=syslog
+#NotifyAccess=all
+
+[Install]
+WantedBy=multi-user.target
