@@ -4,6 +4,7 @@
 
 ```bash
 sudo apt install xdotool unclutter sed
+sudo apt-get install chromium-browser
 ```
 
 In order to use xset & dpms commands, the screen blanking must be enabled in the GUI Raspberry pi config tool or sudo raspi-config
@@ -31,14 +32,6 @@ sudo raspi-config
 sudo nmtui
 ```
 
-## Django
-
-```bash
-cd infoscreen
-python3 -m venv venv
-pip install -r requirements.txt
-```
-
 ## System Service
 
 /etc/systemd/system
@@ -49,13 +42,11 @@ infoscreen@uwsgi.service -> /etc/systemd/system/infoscreen.service
 infoscreen@kiosk.service -> /etc/systemd/system/infoscreen.service
 
 ```bash
-ln -s /home/pi/infoscreen/rpi-config/infoscreen.service /etc/systemd/system/infoscreen@.service
-ln -s /etc/systemd/system/infoscreen@.service /etc/systemd/system/multi-user.target.wants/infoscreen@hardware.service
-ln -s /etc/systemd/system/infoscreen@.service /etc/systemd/system/multi-user.target.wants/infoscreen@uwsgi.service
+ln -s /home/pi/dpsg-jubel-kletterturm/rpi-config/infoscreen.service /etc/systemd/system/infoscreen@.service
 ln -s /etc/systemd/system/infoscreen@.service /etc/systemd/system/multi-user.target.wants/infoscreen@kiosk.service
 
 systemctl daemon-reload
-sudo systemctl enable infoscreen@uwsgi.service infoscreen@kiosk.service infoscreen@hardware.service
+sudo systemctl enable infoscreen@kiosk.service
 ```
 
 ## Make shutdown globally available
