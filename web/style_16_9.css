@@ -17,6 +17,7 @@ body #container {
 	/* background-color: #e2efd9; */
 	/* background-color: #183253; */
 	background-color: #235451;
+	background-color: #014b47;
 }
 
 #content {
@@ -36,16 +37,16 @@ body #container {
 
 #content p {
 	width: 100%;
-	font-size: 2vw;
+	font-size: 3vw;
 	text-align: center;
 	margin-left: 0px;
 }
 
 body #demo {
 	width: 100%;
-	margin: 50px 0 0 20px;
+	margin: 20px 0 0 50px;
 	/* font-size: 4rem; */
-	font-size: 4vw;
+	font-size: 5vw;
 	text-align: center;
 }
 

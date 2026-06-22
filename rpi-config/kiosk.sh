@@ -23,5 +23,5 @@ sleep 5
 
 echo "chromium"
 # /usr/bin/chromium-browser --noerrdialogs --disable-infobars --kiosk http://127.0.0.1/pages/harrypotter &
-/usr/bin/chromium-browser --noerrdialogs --disable-infobars --window-position=0,0 --kiosk /home/pi/dpsg-jubel-kletterturm/web/index_16_9.html
+/usr/bin/chromium --noerrdialogs --disable-infobars --password-store=basic --window-position=0,0 --kiosk /home/pi/dpsg-jubel-kletterturm/web/index_16_9.html
 #/usr/bin/chromium-browser --noerrdialogs --disable-infobars --kiosk http://127.0.0.1/anzeigerefresh.php &
